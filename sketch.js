@@ -21,7 +21,7 @@ function setup() {
   dog.addImage(dog1);
   dog.scale=0.2
 
- foodStock=database.ref('Food')
+ foodStock=database.ref('food')
   foodStock.on("value",readStock);
 
 }
@@ -55,6 +55,6 @@ function readStock(data)
 function writeStock(x)
 {
   database.ref('/').update({
-    'Food':foodS-1
+    'food':foodS-1
   })
 }
